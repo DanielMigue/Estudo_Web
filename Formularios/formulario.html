@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formulario Aqui</h1>
+    <form>
+        <!--O campo for e id serve para relacionar ao clicar no nome o usuário consegue digitar no input designado
+        
+        placeholder->Faz a legenda(marca d'agua)
+        required-> Obriga o usuário a preencher os campos de acordo com o type
+        -->
+
+        <!--LEGENDA PARA NOME-->
+        <label for="campo_nome">Nome:</label>
+
+        <!--CAMPO INPUT DO TYPE TEXT-->
+        <input id="campo_nome" type="text" placeholder="Digite seu nome aqui" required>
+        <br><br>
+
+        <!--LEGENDA PARA EMAIL-->
+        <label for="campo_email">Email:</label>
+
+        <!--CAMPO INPUT DO TYPE EMAIL-->
+        <input id="campo_email" type="email" placeholder="Digite um email" required>
+        <br><br>
+        
+        <!--LEGENDA PARA SENHA-->
+        <label for="campo_senha">Senha:</label>
+
+        <!--CAMPO INPUT DO TYPE PASSWORD-->
+        <input id="campo_senha" type="password" placeholder="Digite uma senha"required>
+
+        <br><br>
+
+        <!--RADIO-->
+
+        <h2>Animal de Estimação</h2>
+        <input type="radio" id="dog" name="animal" value="Cachorro"><!--value é oq é mandado para o formulario-->
+        <label for="dog">Cachorro</label><!--Tem que colocar um label para que do lado apareça uma opção escrita-->
+
+        <br><br>
+
+        <!--Esse radio só pode escolher uma opção por vez devido o mesmo nome "animal", que é o mesmo grupo de radio-->
+
+        <input type="radio" id="cat" name="animal" value="gato">
+        <label for="cat">Gato</label>
+        
+        <br><br>
+
+        <input type="radio" id="bird" name="animal" value="Passarinho">
+        <label for="bird">Passarinho</label>
+        
+        <br><br>
+
+        <!--Com multipla escolha usa-se-->
+
+        <h2>O que você tem em casa?</h2>
+        <input id="item1" type="checkbox" name="item1" value="TV">
+        <label for="item1">TV</label><br><br>
+
+        <input id="item2" type="checkbox" name="item2" value="Geladeira">
+        <label for="item2">Geladeira</label><br><br>
+
+        <input id="item3" type="checkbox" name="item3" value="Computador">
+        <label for="item3">Computador</label><br><br>
+
+        <!--SELECT-->
+
+        <h2>Escolha uma cor:</h2>
+        <select name="cores"><!--No php ele pegaria esse name-->
+            <option selected disabled value="">Selecione uma cor</option><!--O selected + disabled desabilita o campo e junto com o texto emite uma mensagem-->
+            <option value="vermelho">Vermelho</option>
+            <option value="azul">Azul</option>
+            <option value="amarelo">Amarelo</option>
+            <option value="verde">Verde</option>
+            <option value="azul">Azul</option>
+        </select>
+
+        <br><br>
+
+        <!--TEXTAREA cria um campo para escrever -->
+
+        <h2>Digite sua mensagem:</h2>
+        <textarea required name="mensagem" placeholder="Digite aqui sua mensagem" rows="10" cols="50"></textarea><!--rows->linhas e cols->colunas-->
+        <br><br>
+
+        <!--CAMPO INPUT DO TYPE SUBMIT: Envia tudo o que foi digitado pelo usuário-->
+        
+        <input type="submit" value="Enviar Formulario"><br><br>
+
+        <button>Clique aqui</button><!-- Um botão que funciona dentro do formulario. Ele também pode apenas representar um botão fora do formulario, sem necessariamente fazer algo-->
+        
+    </form><br>
+    <hr>
+    <br>
+
+    <button>Botão</button><!-- Um botão que funciona dentro do formulario, fora dele ele -->
+    <br><br>
+
+    <a href="aula12_formulario.html">Voltar para principal</a>
+    
+</body>
+</html>

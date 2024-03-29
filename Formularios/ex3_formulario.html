@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3 - Formulário</title>
+</head>
+<body>
+    <h1>Vaga para Desenvolvedor</h1>
+    <form>
+        <label for="nome">Nome:</label>
+        <input id="nome" type="text" placeholder="Digite seu nome" required>
+
+        <br><br>
+
+        <label for="senha">Senha:</label>
+        <input id="senha" type="password" placeholder="Digite a senha" required>
+
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input id="email" type="email" placeholder="Digite o email" required><br><br>
+        <hr>
+
+        <h3>Marque a área que você trabalha:</h3>
+        <input type="radio" id="front" name="dev" value="front-end"><label for="front" required>front-end</label>
+
+        <br><br>
+
+        <input type="radio" id="back" name="dev" value="back-end"><label for="back">back-end</label>
+
+        <br><br>
+
+        <input type="radio" id="mob" name="dev" value="mobile"><label for="mob">Mobile</label>
+
+        <br><br>
+
+        <input type="radio" id="test" name="dev" value="teste"><label for="test">Teste</label>
+
+        <br><br><hr>
+
+        <h3>Marque as áreas que você domina:</h3>
+        <input id="area1" type="checkbox" name="area1" value="front-end"><label for="area1">front-end</label>
+
+        <br><br>
+
+        <input id="area2" type="checkbox" name="area2" value="back-end"><label for="area2">back-end</label>
+
+        <br><br>
+
+        <input id="area3" type="checkbox" name="area3" value="Mobile"><label for="area3">Mobile</label>
+
+        <br><br>
+
+        <input id="area4" type="checkbox" name="area4" value="Teste"><label for="area4">Teste</label>
+
+        <br><hr>
+
+        <h3>Escolha um curso que você faria:</h3>
+        <select name="cursos">
+            <option selected disabled value="">Selecione um curso</option>
+            <option value="dw">Desenvolvimento Web</option>
+            <option value="java">Java com Spring</option>
+            <option value="mob">Desenvolvimento Mobile</option>
+            <option value="teste">Teste de Software</option>
+        </select>
+
+        <br><br><hr>
+
+        <h3>Sobre você:</h3>
+        <textarea required name="mensagem" placeholder="Fale sobre você, especialidades..." cols="55" rows="15"></textarea>
+        
+        <br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    
+</body>
+</html>

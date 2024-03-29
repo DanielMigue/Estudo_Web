@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+</head>
+<body>
+    <h1>Tag de video</h1>
+
+    <!--ATRIBUTOS:
+
+        -poster: indica uma imagem de tumblr email
+        -autoplay: O video já começa(Não é todo -navegador que tem essa opção)  
+        
+        DESABILITA:
+        -controlsList+nodownload: Tira a possibilidade de download
+        -disablepictureinpicture: Tira os 3 pontos do canto(no meu navegador só tirou o ecra ecra que deixa o video em segundo plano em paixo)
+        -controlsList+nodownload+nofullscreen desabilita a tela cheia
+    -->
+    <video poster="../Imagem/img/computador.jpg" width="100%" autoplay controls disablepictureinpicture controlsList="nodownload nofullscreen">
+        <source src="video/BigBuckBunny.mp4" type="video/mp4">
+    </video>
+    <br><br>
+    <h2>Video do youtube</h2>
+    <!--Apenas com Iframe-->
+    <iframe width="100%" height="400" src="https://www.youtube.com/embed/wpxrIMNNW-4?si=kRMwskZZOA67Qvyt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <br><br>
+
+
+    <a href="principal.Video.html">Voltar para principal</a>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe</title>
+</head>
+<body>
+    <h1>Pagina principal</h1>
+    <p>Seja bem-vindo a página principal</p>
+
+    <hr>
+    
+    <a href="https://google.com" target="_blank">Ir para o Google</a>
+    <br>
+
+    <!--O target jogo para o iframe feito na linha 34 desse código
+    o código da linha 18 esta pegando codigo externo e renderizando dentro da própria página principal
+    -->
+    <a href="../Links/sobre.html" target="meu-iframe">Sobre nós</a>
+    <hr><br><br>
+
+    <a href="../Links/equipe/dimitri.html" target="meu-iframe">Dimitri</a>
+
+    <hr>
+    <!--Arquivo html dentro de outro arquivo html
+    <iframe style="border: none;" src="https://programacaoweb.com.br" width="100%" height="600" title="Meu iframe"></iframe>
+    -->
+
+    <!-- No youtube, após clicar na parte de compartilhar um video, voce vai em incorporar que tera o codigo do video para adicionar na pagina html. Segue o video do Krikor um enxadrista que eu gosto muito-->
+    
+    <iframe width="360" height="215" src="https://www.youtube.com/embed/0q9c2NBghnU?si=cLJJZuG-Bfpmqb6Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <hr>
+    <br>
+
+    <!-- Recurso para clicar no link e ele abrirá dentro do iframe-->
+    <iframe width="100%" style="border: none;" name="meu-iframe" title="Iframe de exemplo"></iframe>
+    <br>
+    
+    
+    
+</body>
+</html>
