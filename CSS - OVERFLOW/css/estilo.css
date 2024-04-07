@@ -1,0 +1,11 @@
+.exemplo{
+    background: blue;
+    color: white;
+    height: 150px;
+    overflow: auto;
+    width: 1200px;
+}
+
+body{
+    overflow-x: hidden;
+}
