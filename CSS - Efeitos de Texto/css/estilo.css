@@ -1,0 +1,35 @@
+h1{
+    text-shadow: 2px 2px 5px red;
+}
+/* 1ºhorizontal, 2ºvertical o 3ºdesfoque*/
+.branco{
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+.multipla{
+    color: black;
+    text-shadow: 0 0 10px #ff0000,2px 2px 5px yellow;
+}/*no google tem "efeitos de textos com sombras" ja prontos
+Coloque box shadow card que aparece
+*/
+
+.caixa{
+    width: 40%;
+    height: auto;
+    background: white;
+    box-shadow:0 4px 8px 0 rgb(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    text-align: center;
+}
+.reduzido{
+    white-space:nowrap;/*Deixa o texto em uma linha horizontal*/
+    overflow: hidden;/*Mostra o conteudo que esta dentro do card*/
+    text-overflow: ellipsis;/*Quanto o tamanho do texto ultrapassa o limite, ele coloca 3 pontos*/
+    padding-bottom: 30px;
+}
+
+.caixa:hover .reduzido{
+    white-space: normal;/*Mostra o conteudo*/
+}
+
+
