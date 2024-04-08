@@ -1,0 +1,26 @@
+.img1:hover{
+    opacity: 0.9;
+}
+.img2:hover{
+    opacity: 0.5;
+}
+.img3:hover{
+    opacity: 0.1;
+}
+.botao{
+    padding: 15px;
+    background: green;
+    color: white;
+    text-decoration: none;
+}
+
+a.botao:hover{
+    opacity: 0.9;
+}
+
+.transparente{
+    background: blue;
+    color: white;
+    padding: 40px;
+    opacity:0.5;
+}
