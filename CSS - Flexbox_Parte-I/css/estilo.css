@@ -1,0 +1,22 @@
+.flex-pai{
+    background: blue;
+    display: flex;
+    flex-direction: row;/*deixa em linha o colum em coluna*/
+    flex-wrap:wrap;/*os elementos descem atindindo o limite do navegador, sem isso fica nowrap que é o padrão*/
+    /*flex-flow: row wrap -> pode-se fazer assim também como atalho da propriedades em cima dela*/
+    justify-content: center;/*determina o modo posicional dos itens "horizontal" em relção a div flex-start(esquerda), center(centro), flex-end(direita)*/
+    height: 400px;
+    align-items: center;/*Em relação a div ele determina a posição "vertical"se fica na parte de cima(flex-start) meio(center) ou embaixo(flex-end)*/
+    align-content: center;/*Pega todo o conteúdo dentro da div e alinha conforme o comando*/
+
+}
+*{
+    box-sizing: border-box;
+}
+.flex-pai div{
+    flex-grow: 1;
+    background: white;
+    border: 1px solid black;
+    padding: 30px;
+    text-align: center;
+}
