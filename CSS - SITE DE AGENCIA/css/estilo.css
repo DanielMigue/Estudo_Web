@@ -1,0 +1,209 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Utilize as cores que você quer de acordo com as cores da empresa utilizando "imagecolorpoicker.com".
+
+Imagens gratuitas: freepik
+Icones: flaticon.com
+*/
+
+
+*{/*Padrão de inicio com Css*/
+    box-sizing: border-box;/*Para incorporar margin e padding dentro de uma caixa*/
+}
+
+body{/*Padrao*/
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.navbar{
+    display: flex;
+    flex-flow: row wrap;
+    height: 100px;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    position: fixed;/*com o site pronto coloquei isso depois*/
+    width:100%;/*Isso também*/
+
+}
+
+.logo{
+    flex: 20%;/*Diminui a div dentro da navbar*/
+    margin-left: 10%;
+    /* border: 1px solid red; */
+    text-align: left;
+}
+
+.logo h1{
+    font-family: "Lobster", sans-serif;
+    color:#180F4A;
+    font-size: 34px;
+}
+.menu{
+    flex:70%;
+    /* border: 2px solid black; */
+    text-align: right;
+    padding: 20px;
+}
+
+.menu a{
+    color: #180F4A;
+    text-decoration: none;/*tira a decoração que vem item*/
+    font-size: 20px;
+    padding: 20px 16px;/*20px altura e 16 de largura*/
+}
+
+.menu a:hover{
+    color: #ff2978;
+    border-top: 4px solid #180F4A;
+    text-decoration: underline;/*Decora com Underlina embaixo do item ao passar o mouse*/
+}
+
+#botao{/*Usa-se ID por que é mais forte e o CSS meerá somente nele*/
+    background: #180F4A;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 15px;/*borda do botão*/
+    margin-right: 10%;
+    margin-left: 5%
+
+}
+
+#botao:hover{
+    border:none;
+    background:#ff2978 ;
+}
+
+.header{
+    display: flex;
+    flex-direction: row wrap;
+    height: auto;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.headline{
+    flex:40%;
+    margin-left:10%;
+}
+
+.headline h2{
+    font-weight: 900;
+    font-size: 20px;
+    color: #180F4A;
+    padding:0;
+    margin: 0;
+}
+
+.headline p{
+    color: gray;
+    text-align: left;
+}
+
+.contact-btn{
+    background: #ff2978;
+    padding: 20px;
+    color: white;
+    text-transform: uppercase;/*maiusculo*/
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;/*link sem vem inline, ai tem q colocar inline-block*/
+}
+
+.contact-btn:hover{
+    background: #180F4A;
+}
+
+.img-headline{
+    margin-right: 10%;
+    flex:40%;
+    /* border:1px solid #ff2978; */
+    text-align: center;
+}
+
+section{
+    display: inline-block;
+    margin-top: 80px;
+    /* border: 1px solid black; */
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 5%;
+    text-align: center;
+}
+
+section h2{
+    width: 100%;
+    font-size: 50px;
+    margin: 0;
+    font-family: "Lobster", sans-serif;
+    font-weight: bold;
+    color: #180F4A;
+}
+
+.servicos{
+    display: inline-block;
+    margin-top: 5%;
+    /* border: 1px solid #180F4A; */
+}
+.card{
+    display: inline-block;
+    width: 30%;
+    padding: 20px;
+    margin: 1%;
+    border: 1px solid #ff2978;
+    border-radius: 10px;
+    cursor: pointer;/*Cursor de maozinha que mostra como fosse clicavel*/
+}
+
+.texto-oculto{
+    display: none;
+}
+
+
+.card:hover{
+    background: #ff2978;
+    color: white;
+    padding: 40px;
+}
+
+.card:hover img{/*classe card sobre imagem*/
+    display: none;
+}
+
+.card:hover .card-text{
+    display: none;
+}
+
+
+.card:hover .texto-oculto{
+    display: block;
+}
+
+footer{
+    margin-top: 100px;
+    height: 400px;
+    background-image:linear-gradient(180deg,#180F4A,#090422,black);
+    text-align: center;
+    border-top:5px solid #ff2978 ;
+}
+
+.logo-rodape{
+    padding: 100px;
+}
+
+.agencia{
+    font-family: "Lobster", sans-serif;
+    color:white;
+    font-size: 34px;
+}
+
+.whats{
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    width: 100px;
+}
