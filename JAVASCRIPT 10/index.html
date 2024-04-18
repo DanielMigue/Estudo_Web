@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo JS</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body onload="alert('Terminou de carregar')">
+    <h1>Aprendendo JavaScript</h1>
+    <h2>Eventos Javascript</h2>
+    <p id="texto"></p>
+
+
+    <!--EVENTOS DE CLIQUE-->
+    <!-- <button onclick="eventoClick()">Clique Aqui</button>Com um clique funciona -->
+    <button ondblclick="eventoDblClick()">Clique Aqui</button><!--dois cliques funciona-->
+
+    <!--EVENTOS DE MOUSE-->
+    <div id="teste" onmouseout="viraAzul()" onmouseover="viraVermelho()" 
+    style="margin: auto auto; width: 80%; height: 200px; background: blue;">
+    </div>
+<br>
+    <!--quando for focado, limpe...-->
+    <!-- <input onfocus="limpaTexto()" id="campoTexto" style="padding:80px;font-size:40px;" type="text" placeholder="Digite alguma coisa" value="Já vem com texto"> -->
+
+
+    <!--Quando o conteúdo muda-->
+    <!-- <input onchange="mudou()" id="campoTexto" style="padding:80px;font-size:40px;" type="text" placeholder="Digite alguma coisa" value="Já vem com texto"> -->
+
+    <!--Quando o elemento perde o foco-->
+    <input onkeyup="teclaPressionada()" onblur="eventoClick()" id="campoTexto" style="padding:80px;font-size:40px;" type="text" placeholder="Digite alguma coisa">
+
+
+    <script src="js/index.js"></script> 
+</body>
+</html>
