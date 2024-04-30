@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulas de jQuery</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis recusandae earum, aut nemo, molestiae in fugit est minima ipsam culpa, saepe illum esse vel? Ipsa sunt dolor quis quibusdam molestiae?</p>
+    <p id="teste">Isso é um parágrafo de teste</p>
+    <p class="p-yellow">Outro parágrafo</p>
+    <div class="p-yellow">Texto dentro de uma div</div>
+    <script src="js/jquery-3.7.1.js"></script>
+    
+    <script>
+         //Leitura Sugerida: https://bit.ly/3roOfps
+        $(document).ready(function(){//dps que a página carregar...
+            //$('p').html('Inserido com jQuery')//Selecionou todos os parágrafos, ele muda todos os paragráfos do html para "inserido com jQuey".
+        $('#teste').html('Inserido com jQuery')//Selecionou todos os parágrafos, ele muda todos os paragráfos do html para "inserido com jQuey".//Só muda o segun parágrafo pois o ID é teste. Pode-se fazer isso com uma classe
+
+        $('div.p-yellow').html('Inserido com jQuery em uma div com o mesmo nome de classe do primeiro paragrafo');//a div da classe p-yellow foi usado e esta pronta pra alteração somente dela
+        })
+    </script>
+</body>
+</html>
