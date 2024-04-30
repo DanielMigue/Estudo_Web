@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulas de jQuery</title>
+</head>
+<body>
+    <p id="teste"></p>
+    
+    <script src="js/jquery-3.7.1.js"></script>
+    <script>
+        //JAVASCRIPT PURO
+        document.getElementById("teste").innerHTML = "teste";
+
+        //jQuery
+        $("teste").html("teste");//economica mais linhas
+        $('p').addClass('nome-da-classe');//adiciona uma classe nova de CSS
+    </script>
+    <script>
+        $(document).ready(function(){
+            //função para disparar um evento quando a página é carregada
+            //código...
+        })
+    </script>
+</body>
+</html>
