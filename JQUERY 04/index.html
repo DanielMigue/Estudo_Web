@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulas de jQuery</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis recusandae earum, aut nemo, molestiae in fugit est minima ipsam culpa, saepe illum esse vel? Ipsa sunt dolor quis quibusdam molestiae?</p>
+    <p id="teste">Isso é um parágrafo de teste</p>
+    <p class="p-yellow">Outro parágrafo</p>
+    <div class="p-yellow">Texto dentro de uma div</div>
+    <hr>
+    <input id="campotexto" type="text" style="padding: 50px;" placeholder="digite algo">
+    <button id="botao" style="padding:50px;">Clique aqui</button>
+    <hr>
+    <button id="botao2" style="padding:50px;">Clique aqui</button>
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/onScript.js"></script>
+
+    <script>
+        //tanto faz usar aspas simples ou duplas.
+        //No momento de instanciar o ID ou classe, tem que colocar igual no CSS, id=#ID, classe=.classe
+        $(document).ready(function (){//com essa linha de codigo todos os eventos abaixo serão feitos depois de carregar a página
+            //depois de 100 milissegundos ao carregar a página, ele foca no input, 
+            
+             setTimeout(function() {
+                 $("#campotexto").focus();
+            }, 100);
+            $('#campotexto').focus(function(){//colocando foco no input
+                $(this).css("background-color", "yellow");
+            });
+
+            $('#campotexto').blur(function(){//tirando o foco no input
+                $(this).css("background-color", "white");
+            });
+
+           $("#teste").click(function (){
+                //aqui dentro o seu código
+                $(this).html('Mudei quando fui clicado');//Para o mesmo item receber um valor diferente, coloca-se "this"
+           });
+           
+           //$('#botao').dblclick(function() --> clique duplo
+           //$('#botao').mouseenter(function() --> mouse entrado no elemento, no javascript puro era mousehover
+           //$('#botao').mouseleave(function() --> quando o mouse sair no elemento
+           //$('#botao').click(function() -->
+           //click do mouse -> mousedown
+           //quando o clique termina -> mouseup
+           //quando o mouse estiver sobre ->
+           //quando o mouse estiver sobre -> hover
+           
+           $('#botao').click(function(){
+                $('p').hide();//hide=esconder. O hide esconde qualquer item que você desejar
+                $('div').hide();
+                $('hr').hide();
+           });
+
+           //Como se fosse um atalho do mouseleave e mouseenter
+           $('#botao').hover(function(){
+                $(this).text('Entrou mouse')
+           },
+           function(){
+            $(this).text('Saiu o mouse')
+           }
+            );
+            
+        })
+        
+    </script>
+</body>
+</html>
