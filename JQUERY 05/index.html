@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulas de jQuery</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .d-inline{
+            display: inline-block;
+            height: 200px;
+            width: 200px;
+        }
+        button{
+            padding: 40px;
+        }
+
+        .red{
+            background-color: red;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .green{
+            background-color: green;
+        }
+
+        #flip, 
+        #painel{
+            padding: 5px;
+            text-align: center;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+        }
+
+        #painel{
+            /*começa oculto*/
+            display: none;
+            padding: 50px;
+
+        }
+        #flip2, 
+        #painel2{
+            padding: 5px;
+            text-align: center;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+        }
+
+        #painel2{
+            padding: 50px;
+        }
+        #flip3, 
+        #painel3{
+            padding: 5px;
+            text-align: center;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+        }
+
+        #painel3{
+            display: none;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="d-inline red"></div>
+    <div class="d-inline blue"></div>
+    <div class="d-inline green"></div>
+
+    <hr>
+
+    <button id="botaoHide">Ocultar</button>
+    <button id="botaoShow">Mostrar</button>
+
+    <hr>
+
+    <button id="botaoToggle">Liga e desliga</button>
+    <hr>
+    <button id="botaoFadeIn">FadeIN</button>
+    <button id="botaoFadeOut">FadeOUT</button>
+    <hr>
+    <button id="botaoFadeToggle">FadeToggle</button>
+    <hr>
+
+    <div id="flip">Clique aqui para aparecer o painel</div>
+    <div id="painel">Painel Oculto</div>
+    <hr>
+
+    <div id="flip2">Clique aqui para aparecer o painel</div>
+    <div id="painel2">Painel Oculto</div>
+    <hr>
+
+    <div id="flip3">Clique aqui para aparecer o painel</div>
+    <div id="painel3">Painel Oculto</div>
+    <br><br>
+    <a href="animacoes.html">Animações JavaScript</a><!--Link para outro arquivo index com animações-->
+    
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#botaoHide').click(function(){
+                //metodo de ocultar "hide"
+                $('.blue').hide('slow', function(){
+                    //CALLBACK. depois do slow ele dispara
+                    alert('Terminou de esconder');
+                });//dentro do hide 'slow'->oculta de vagar e 'fast'->oculta rapido 
+            });
+
+            $('#botaoShow').click(function(){
+                //metodo de mostrar "show"
+                $('.blue').show(5000,function(){
+                    alert('terminou de mostrar')
+                });//mesma coisa da linha 46 só que para mostrar usa-se o fast e slow tbm, ou em milissegundos
+            });
+
+            $('#botaoToggle').click(function(){
+                $('.green').toggle(1000,function(){
+                    alert('Terminou de esconder');
+                })
+            });
+
+            //ELE FAZ UM EFEITO DE FLASH PARA SAIR OU ENTRAR
+            $('#botaoFadeIn').click(function(){
+                //fadeIn->entrada
+                $('.blue').fadeIn('slow');
+                })
+            });
+
+            $('#botaoFadeOut').click(function(){
+                //fadeOut->saída
+                $('.blue').fadeOut('slow');
+            });
+
+                //fadeToggle, tira e coloca com efeito de fade(parecido com uma flash)
+            $('#botaoFadeToggle').click(function(){
+                $('.blue').fadeToggle('slow')
+            })
+            
+            //APARECE O PAINEL OCULTO
+            $('#flip').click(function(){
+                $('#painel').slideDown('slow')
+            })
+            //OCULTA UM PAINEL
+            $('#flip2').click(function(){
+                $('#painel2').slideUp('slow')
+            })
+            //OCULTA E DESOCULTA
+            $('#flip3').click(function(){
+                $('#painel3').slideToggle('slow')
+            })
+            
+
+        </script>
+</body>
+</html>
