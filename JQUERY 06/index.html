@@ -1,0 +1,160 @@
+<!-- O DOM MANIPULA TUDO DENTRO DO DOCUMENTO-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulas de jQuery</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .red{
+            color: red;
+        }
+        .blue{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>O jQuery pode manipular o DOM</h1>
+    <h2>DOM = Document Object Model (Modelo de Objeto de Documento)</h2>
+    <p>Em outras palavras é a árvore de elementos do nosso código. O jQuery pode acessar e atualizar dinamicamente o conteúdo, a estrutura e o estilo de um documento. Tudo pode ser modificado, adicionado ou removido usando jQuery</p>
+
+    <input id="texto" type="text" placeholder="Digite algo">
+    <br><br>
+    <a id="link" target="_blank" href="https://google.com.br">Links para o google</a>
+    <button id="botao">Verificar link</button>
+    <hr><br><br>
+    <img src="https://www.google.com.br/images/branding/googlelogo/2x/googlelogo_color_160x56dp.png">
+    <br><br>
+    <hr>
+    <div id="teste">
+        <p>Paragrafo</p>
+        <p>Paragrafo</p>
+        <p>Paragrafo</p>
+        <p>Paragrafo</p>
+        <p>Paragrafo</p>
+    </div>
+    <br><br>
+   
+    <button id="adiciona">Adiciona texto no h1</button>
+    <br><br>
+    <button id="adicionaDiv">Adiciona div</button>
+    <br><br>
+    <button id="botao2">Modificar Titulo h1</button>
+    <br><br>
+    <button id="botao3">Modificar  Titulo h2</button>
+    <br><br>
+    <button id="botao4">Atribua valor ao input</button>
+    <br><br>
+    <button id="botao5">trocar o link</button>
+    <br><br>
+    <button id="botao6">trocar imagem</button>
+    <br><br>
+    <button id="botao7">Deletar Titulo</button>
+    <br><br>
+    <button id="botao8">Esvaziar Div dos paragrafos</button>
+    <br><br>
+    <hr>
+    <button id="botao9">Modificar CSS</button>
+    <br><br>
+    <button id="botao10">Adiciona uma classe</button>
+    <br><br>
+    <button id="botao11">Remove uma classe</button>
+    <br><br>
+    <button id="botao12">Botão adiciona e remove classe</button>
+    <br><br>
+    <hr>
+    <button id="botao13">Tamanho da imagem do google</button>
+    <br><br>
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            //PEGA O CONTEUDO HTML
+           // var textoh1 = $('h1').html();
+           // alert(textoh1);
+            //__________________________
+
+            //PEGA UM TEXTO DE UM PARAGRAFO
+           //var textoP = $('p').text();//"text" ou "html" usado para tudo que tem texto, h1,p...
+           //alert(textoP);
+           //______________________________
+           //EVENTO PARA SABER O QUE A PESSOA DIGITOU
+            $('#texto').blur(function(){//evento para quando o usuario digitar e o usuario sair do campo irá acontecer...
+                var valor = $(this).val();//"val" usa pra pegar valores de tipo de entrada(inputs..selects...textarea)
+                alert('Foi digitado: '+valor)
+            });
+
+            $('#botao').click(function(){
+                //PEGANDO VALOR DO ATRIBUTO href
+                var link = $("#link").attr("href");//"attr" de atributo para pegar qual o atributo
+                alert('O link vai para: ' + link)
+            });
+            
+            $('#botao2').click(function(){
+                $('h1').text('Mudei o texto com jQuery');//Quando escreve dentro do text você insere um novo valor, se voce coloca ele puro como "text()" você pega o valor que está nele
+            })
+
+            $('#botao3').click(function(){
+                $('h2').html('<b>Mudei o h2</b> com <i>jQuery</i>');//No html pode-se passar tags
+            })
+
+            $('#botao4').click(function(){
+                $('#texto').val('Daniel Miguel');//No html pode-se passar tags
+            })
+
+            $('#botao5').click(function(){
+                $('#link').text('Ir para programacao web');
+                $('#link').attr('href','https://programacaoweb.com.br');
+            })
+
+            $('#botao6').click(function(){
+                $('img').attr('src','https://play-lh.googleusercontent.com/OQldOZ7duliKGGm1LgG1paJTA4tpXiERZCyBS6WdOOjxSfGpV0oBMhhw4s_j5JdgBB8=w600-h300-pc0xffffff-pd');
+            })
+            $('#adiciona').click(function(){
+                $('h1').append('Adicionei este texto com jQuery')//O append adiciona qualquer coisa, se eu quisesse colocar antes da frase fixada, eu posso usar o "preprend()"
+            })
+
+            //ADICIONA DIV
+            $('#adicionaDiv').click(function(){
+                $('body').append('<div style="width:150px;margin:1%; height:150px; display:inline-block;background-color:red"></div>');
+            })
+            
+            //REMOVER ITEM
+            $('#botao7').click(function(){
+                $('h1').remove();//remove tudo
+            })
+
+            //PARA ESVAZIAR UM ELEMENTO
+            $('#botao8').click(function(){
+                $('#teste').empty();//O empty pega o que tem dentro da div e esvazia ele. a div nao some, mas o elemento dentro dela sim
+            })
+
+            //ADICIONA CLASSE
+            $('#botao10').click(function(){
+                $('#link').addClass('red');
+            })
+
+            //REMOVE CLASSE
+            $('#botao11').click(function(){
+                $('#link').removeClass('red');
+            })
+
+            //ADICIONA E REMOVE CLASSES
+            $('#botao12').click(function(){
+                $('#link').toggleClass('red');
+            })
+            //DESCOBRIR TAMANHO DA IMAGEM
+            $('#botao13').click(function(){
+                var larguraImg = $('img').width();
+                var alturaImg = $('img').height();
+                alert('A largura é: ' + larguraImg + " px e a altura: " + alturaImg + " px")
+                //poderia também manipular o tamanho da imagem inserindo valores dentro do das funções height e width. Não so com imagem mas com qualquer elemento, eu posos fazer isso
+            })
+        });
+        </script>
+</body>
+</html>
