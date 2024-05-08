@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulas de jQuery</title>
+    <style>
+        table{
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 80%;
+            margin-left: 10%;
+        }
+        td,
+        th{
+            border: 1px solid #ccc;
+            text-align: center;
+            padding: 8px;
+        }
+        input{
+            margin-left: 10%;
+            margin-bottom: 1%;
+            padding: 8px;
+            }
+    </style>
+</head>
+<body>
+    <input type="text" id="busca" placeholder="Buscar na tabela">
+    <table>
+        <thead><!--Titulos-->
+            <tr>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="MinhaTabela"><!--responsavel pelo conteudo da tabela, e filtrar os intens que queremos-->
+            <tr>
+                <td>Dimitri</td>
+                <td>Teixeira</td>
+                <td>dimitri@exemplo.com</td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>da Silva</td>
+                <td>maria@mail.com</td>
+            </tr>
+            <tr>
+                <td>Julia</td>
+                <td>Santos</td>
+                <td>july@teste.com</td>
+            </tr>
+            <tr>
+                <td>Javascript</td>
+                <td>Jquery</td>
+                <td>kkk@test.com</td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+    <input type="text" id="busca2" placeholder="Buscar na Lista">
+    <ul id="lista" style="margin-left: 10%;">
+        <li>Arroz</li>
+        <li>Feijão</li>
+        <li>Leite</li>
+        <li>Carne</li>
+    </ul>
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script>
+            $(document).ready(function(){
+                $('#busca').on('keyup', function(){//evento keyup acontece quand a tecla for solta
+                    var valor = $(this).val().toLowerCase();//pega o valor digitado no input e transforma em minusculo e coloca na variavel valor
+                    
+                    $('#MinhaTabela tr').filter(function(){
+                        $(this).toggle($(this).text().toLocaleLowerCase().indexOf(valor) > -1);//toggle é um método que liga e desliga, entao a pessoa filtra e se a informação nao bater ele esconde(desliga).text: o texto digitado com letras minusculas.O indexof, é pra verificar se existe um texto com a informação que fica dentro do indexOf, se sim ele mostra quantos caracteres o texto tem, sendo -1 nao existe e maior que -1 existe. Se isso tudo for verdade ele ativa o toggle, é uma condição
+                    })
+                });
+            })
+
+            //modo encurtado com keyup direto
+            $('#busca2').keyup(function(){
+                var valor = $(this).val().toLowerCase();
+                $('#lista li').filter(function(){
+                        $(this).toggle($(this).text().toLocaleLowerCase().indexOf(valor) > -1)
+                    })
+
+            })
+    </script>
+</body>
+</html>

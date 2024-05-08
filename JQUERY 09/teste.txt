@@ -1,0 +1,5 @@
+<h2> Uhul, como AJAX é legal</h2>
+<p> Este conteudo foi puxado de um arquivo externo</p>
+<script>
+alert('Alerta carregado de fora')
+</script>
